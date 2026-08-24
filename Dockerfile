@@ -25,8 +25,9 @@ ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development" \
-    LD_PRELOAD="/usr/local/lib/libjemalloc.so"
-
+    LD_PRELOAD="/usr/local/lib/libjemalloc.so" \
+    HTTP_PORT="8080" \
+    PORT="8080"
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
